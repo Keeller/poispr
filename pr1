@@ -1,0 +1,38 @@
+#lang racket
+(
+ define (module num)
+ (if (< num 0) (* num -1) (num))   
+)
+
+(
+define (re dataDisplay)
+ (display dataDisplay)
+ (display " ")
+ (read)
+)
+(define (cube a)
+  (* a a a)
+)
+
+(
+define (apple kg pkg)
+ (* kg pkg)
+
+)
+(define (println printedMessage printedData)
+  (display printedMessage)
+  (display " ")
+  (display printedData)
+  (display "\n")
+
+)
+(define (cilv r h)
+  (* 3.14 r r h)
+  )
+(display "Вычисление объема куба.\n")
+(println "Объем куба - " (cube (re "Введитек Ребро")))
+(display "Вычисление стоимости покупки. \n")
+(println "Полная стоимость итого" (apple (re "Введите колличество киллограмм") (re "Введите стоимость")))
+(display "Вычисление объема цилиндра. \n")
+(println "Объем Цилиндра - "(cilv (re "Введите радиус основания") (re "Введите высоту")))
+
