@@ -1,0 +1,37 @@
+#lang racket
+(
+define (re dataDisplay)
+ (display dataDisplay)
+ (display " ")
+ (read)
+)
+
+(
+ define (println printedMessage printedData)
+  (display printedMessage)
+  (display " ")
+  (display printedData)
+  (display "\n")
+
+)
+
+(
+ define (printr message)
+  (display message)
+  (display "\n")
+)
+
+
+
+(
+ define (cickl R1 R2)
+  (if (> R1 R2)
+  (* 3.14 (- R1 R2) (- R1 R2))
+  (printr "Радиус кольца не может быть больше радиуса отверстия")
+  )
+)
+
+(printr "Вычисление площади кольца.")
+(printr "Введите исходные данные")
+(println "Итого" (cickl (re "Радиус кольца") (re "Радиус отверстия")))
+
