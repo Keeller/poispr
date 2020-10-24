@@ -1,0 +1,40 @@
+#lang racket
+
+
+(
+ define (println printedMessage printedData)
+  (display printedMessage)
+  (display " ")
+  (display printedData)
+  (display "\n")
+
+)
+
+(
+ define (printr message)
+  (display message)
+  (display "\n")
+)
+(
+ define (sq list)
+  (* (car list) (car list))
+  (* (car (cdr list)) (car (cdr list)))
+  (* (car (cdr (cdr list))) (car (cdr (cdr list))))
+  (list)
+)
+(
+define (cube list)
+  (* (car list) (car list) (car list))
+  (* (car (cdr list)) (car (cdr list)) (car (cdr list)))
+  (* (car (cdr (cdr list))) (car (cdr (cdr list))) (car (cdr (cdr list))))
+ (list)
+ 
+)
+(
+define (quest list)
+ (if (= (modulo (car list) 2) 0)
+     (sq list)
+     (cube list)
+  )
+)
+(printr (quest (list 2 3 5 6 7)))
